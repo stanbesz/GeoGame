@@ -1,0 +1,15 @@
+{
+  "name": "geogame",
+  "version": "1.0.0",
+  "description": "A fun game to test your Geography knowledge",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"parcel ./index.html",
+    "build":"parcel build ./index.html"
+  },
+  "author": "Stanimir Aleksandrov",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

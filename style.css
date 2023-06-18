@@ -1,0 +1,24 @@
+h1{
+    color: whitesmoke;
+}
+body{
+    background-color: rgb(240, 167, 83);
+}
+
+.container{
+    display: flex;
+}
+
+.title{
+    text-align: center;
+    background-color: rgb(233, 181, 123);
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    border-radius: 10px;
+    border-color: whitesmoke;
+    border-style: dashed;
+}
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
