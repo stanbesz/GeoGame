@@ -81,7 +81,16 @@ body{
     vertical-align: baseline;
     width: auto;
 }
-
+.country{
+    font-size: 22px;
+}
+.country-flag{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.country-row{
+    
+}
 .signup-button:hover {
     transform: translateY(-1px);
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
