@@ -88,9 +88,6 @@ body{
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.country-row{
-    
-}
 .signup-button:hover {
     transform: translateY(-1px);
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
@@ -216,6 +213,24 @@ body{
     text-align: left;
     margin-top: 10px;
 }
+.cover-game-area > * {
+    margin:5px 0;
+  }
+.cover-game-area{
+    
+    height: 50%;
+    margin:0 auto;
+   text-align:center;
+   justify-content: center;
+}
+.game-area{
+    height: 50%;
+    margin:0 auto;
+    background-image:url("images/game-area-background.png");
+    background-size: 300px;
+    background-repeat: repeat;
+}
+
 * {
     font-family: 'Roboto Condensed', sans-serif;
 }
