@@ -19,19 +19,10 @@ const checkGameArea = function(){
     }
 }
 
-
-
-// const getCountry = async function(searchTag='name',countryName){
-//  let request = await fetch(`${API_URL}${searchTag}/${countryName}`);
-//  let country = await request.json();
-//  console.log(country);
-// }
 const handleCountryView = async function(){
 const country = await getJSON('demonym','peruvian');
-console.log(country);
 countryView.render(country);
 }
 handleCountryView();
-//getCountry(...[,'germany']);
-//getCountry('demonym','peruvian');
+
 

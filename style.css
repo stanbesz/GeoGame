@@ -1,85 +1,81 @@
+@keyframes waves {
+    0% {
+        background: radial-gradient(ellipse farthest-corner at left top, rgba(157,254,255,1) 0%, rgba(1,109,173,1) 100%)
+      }
+      50% {
+        background: radial-gradient(ellipse farthest-corner at top, rgba(157,254,255,1) 50%, rgba(1,109,173,1) 50%)
+      }
+      100% {
+        background: radial-gradient(ellipse farthest-corner at right top, rgba(157,254,255,1) 100%, rgba(1,109,173,1) 0%)
+      }
+}
+@keyframes sail_boat {
+    0%{
+        left:0px;
+    }
+    50%{
+        left:300px;
+    }
+    100%{
+        left:0px;
+    }
+}
+@keyframes steam_boat {
+    0%{
+        top:30px;left:20px;
+    }
+    25%{
+        top:30px;left:400px;
+    }
+    50%{
+        top:80px;left:400px;
+    }
+    75%{
+        top:80px;left:20px;transform: scaleX(-1);
+    }
+    100%{
+        top:30px;left:20px;
+    }
+}
+@keyframes cloud {
+    0%{
+        left:-150px;
+    }
+    50%{
+        left:1050px;
+    }
+    100%{
+        left:-150px;
+    }
+}
+.cloud{
+    position: absolute;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 150px;
+}
+#cloud-1{
+    animation: cloud 25s ease-in-out infinite;
+}
+#cloud-2{
+    top: 100px;
+    color:gray;
+    animation: cloud 60s ease infinite;
+}
+#cloud-3{
+    top:45px;
+    color:aliceblue;
+    animation: cloud 35s ease-out infinite;
+}
 h1{
     color: whitesmoke;
 }
 body{
-    background-color: rgb(240, 167, 83);
-    margin-left: 130px;
-}
-.navigation-title{
-    text-align: center;
-    margin: 5px;
-    padding-bottom: 5px;
-    border-bottom: dotted;
-    border-color: whitesmoke;
-}
-/* CSS */
-.login-button {
-  align-items: center;
-  background-clip: padding-box;
-  background-color: #fa6400;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: center;
-  line-height: 1.25;
-  margin: 0;
-  min-height: 3rem;
-  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-  position: relative;
-  text-decoration: none;
-  transition: all 250ms;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  width: auto;
-}
+    background: rgb(174,238,238);
+    background: radial-gradient(ellipse,rgba(157,254,255,1) 0%, rgba(1,109,173,1) 100%);
+    padding: 0 150px 0 150px;
+    min-height: 100%;
 
-.login-button:hover {
-  background-color: #fb8332;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  transform: translateY(-1px);
-}
-
-.login-button:active {
-  background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-  transform: translateY(0);
-}
-.signup-button {
-    align-items: center;
-    background-clip: padding-box;
-    background-color: #523c2d;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 1.25;
-    margin: 0;
-    min-height: 3rem;
-    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
-    position: relative;
-    text-decoration: none;
-    transition: all 250ms;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    vertical-align: baseline;
-    width: auto;
 }
 .country{
     font-size: 22px;
@@ -88,149 +84,76 @@ body{
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.signup-button:hover {
-    transform: translateY(-1px);
-    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-    transform: translateY(-1px);
-}
-
-.signup-button:active {
-    background-color: #59483d;
-    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
-    transform: translateY(0);
-}
-.container{
-  display: flex;
-  justify-content:center;
-  margin:10 auto;
-  width:97%;
-  height:100%;
-  border:dashed;
-  border-color: whitesmoke;
-  border-radius: 10px;
-  padding-bottom: 10px;
-}
-.game-navigation{
-  height:100%;
-  width:120px;
-  background-color: rgb(233, 181, 123);
-  position: fixed;
-  display: flex;
-  top: 0; /* Stay at the top */
-  left: 0;
-  overflow-x: hidden;
-  flex-direction:column;
-  justify-content: flex-start;
-  border-right: dashed;
-  border-color: whitesmoke;
-
-}
-.nav-item{
-  padding-top:10px;
-  padding-bottom:10px;
-  text-align: center;
-  align-items: center;
-  font-size: 20px;
-  color:black;
-  text-decoration: none;
-  /*background-color: rgb(240, 167, 83);*/
-}
-.nav-item:hover{
-    color: azure;
-    background-color: rgb(240, 167, 83);
-}
-.flex-item{
-  padding:15px;
-   background-color: rgb(233, 181, 123);
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    border-radius: 10px;
-    border-color: whitesmoke;
-    border-style: dashed;
-}
-.comment-section{
-    border-radius: 10px;
-    border-color: black;
-    margin: 15px;
-    padding: 10px;
-    border-style: dashed;
-    background-color: rgb(233, 181, 123);
-
-}
-.comment-section-title{
-    border-bottom:dashed;
-    padding-bottom: 10px;
-}
-.comment-entry{
-    border-bottom: dotted;
-    border-color:black;
-    padding-bottom: 10px;
-}
-.comment-title{
-    color:whitesmoke;
-}
-.comment-content{
-    font-style:italic;
-}
 .title{
     text-align: center;
-    background-color: rgb(233, 181, 123);
     margin-top: 1em;
     margin-left: 1em;
     margin-right: 1em;
+    margin-bottom: 15px;
     border-radius: 10px;
     border-color: whitesmoke;
-    border-style: dashed;
+    border-style: double;
+    border-width: 5px;
 }
 .game-title{
     padding-top: 0%;
-    border-bottom: dotted;
-    border-color: whitesmoke;
-    padding-bottom: 5px;
+    border-bottom: groove;
+    border-color: rgb(245, 179, 66);
 }
 .game-area{
-  min-width: 80%;
-  min-height: 500px;
-  width:100%;
-  height:100%;
-  text-align: center;
-}
-.game-info{
-    padding-left: 10px;
-    margin-top: 10px;
-    min-width: 175px;
-    display: flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    border-left: dotted;
-    border-color: whitesmoke;
+    overflow: hidden;
+    display: grid;
+    top:0;
+    right:0;
+    min-width: 100%;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
     
 }
-.game-data-entry{
-    font-style:oblique;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 10px;
+.backdrop{
+    position: relative;
+    min-height: 75vh;
 }
-.cover-game-area > * {
-    margin:5px 0;
+.sky {
+    width:100%;
+    height: calc(70vh - 260px);
+    background:linear-gradient(#01b3ff,#bdf0f1);
   }
-.cover-game-area{
-    
-    height: 50%;
-    margin:0 auto;
-   text-align:center;
-   justify-content: center;
+  .sea {
+    width:100%;
+    height:200px;
+    background:linear-gradient(#016dad,#90dfe3);
+  }
+  .beach {
+    width:100%;
+    height:120px;
+    background:linear-gradient(#efbd6b,#dda863);
+  }
+.boat{
+    position: relative;
+    font-size: 50px;
+    height:30px;
+    width:30px;
 }
-.game-area{
-    height: 50%;
-    margin:0 auto;
-    background-image:url("images/game-area-background.png");
-    background-size: 300px;
-    background-repeat: repeat;
+#steam-ship-1{
+    left:100px;
+    top:-15px;
+    animation: steam_boat 10s ease infinite;
 }
-
+#sail-ship-1{
+    left:600px;
+    top:60px;
+    animation: sail_boat 50s ease-in-out infinite;
+}
+.game-container{
+    overflow: hidden;
+    border: 5px outset black;
+    border-color:rgb(245, 179, 66);
+    position: relative;
+    min-height: 80%;
+    margin: 0 150px 0 150px;
+}
 * {
     font-family: 'Roboto Condensed', sans-serif;
 }
