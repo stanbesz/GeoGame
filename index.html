@@ -58,9 +58,23 @@
     </div>
       <div class="beach"></div>
     
-    <div class="game-area">
-      <h3 class="game-title" id="game-name">This is the NAME </h3>
+    <div class="game-area hidden">
+      <h3 class="game-title" id="game-name">What is the country?</h3>
+      <div class="grid-table">
+        
+      </div>
     </div>
+    <form class="input-data">
+      <h3 class="game-title" id="game-question">Please choose a game and countries!</h3>
+      <div class="flex-row">
+        <select name="game-types input" class="game-types">
+          <option value="game-flag">Flag</option>
+          <option value="game-pop">Population</option>
+          <option value="game-neighbour">Neighbours</option>
+        </select>
+        <input type="text" class="input-text input" placeholder="Enter number:(1-197)">
+        <button type="submit" class="submit-data input">Submit</button>
+    </form>
   </div>
   </div>
 

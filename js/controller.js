@@ -1,28 +1,35 @@
-'using strict';
 
 import { API_URL } from "./config";
 import { getJSON } from "./helpers";
-import countryView from "./views/view";
-
-const commentSection = document.querySelector('.comment-section');
+import countryView from "./views/countryView";
+import inputView from "./views/inputView";
+import * as model from './model';
 const gameArea = document.querySelector('.game-area');
-const removeLastCommentBorder = function(){
-    const lastComment = commentSection.lastElementChild;
-    lastComment.style.borderBottom = "none";
-    console.log(lastComment);
+const sailBoat = document.getElementById('sail-ship-1');
+const submitButton = document.querySelector('.submit-data');
+//const inputTable = document.querySelector('.input-data');
+const playField = document.querySelector('.game-area');
+const inputAmount = document.querySelector('.input-text');
+const submitData = document.querySelector('.submit-data');
+const gameType = document.querySelector('.game-types');
+
+const controlInputView =  function(){
+    const res = inputView.getResult();
+    inputView.toggleInputData();
+    console.log("In control",res);
+    model.setGameInfo(res);
+    model.populateState(res.amount);
+    console.log(model.state.countries);
 }
-removeLastCommentBorder();
 
-const checkGameArea = function(){
-    if(gameArea.hasChildNodes){
-
-    }
+const controlCountryView = function(){
+    countryView.renderSpinner();
+    countryView.toggleGameData(model.state.countries[0]);
 }
 
-const handleCountryView = async function(){
-const country = await getJSON('demonym','peruvian');
-countryView.render(country);
+const init = function(){
+    inputView.addEventHandler(controlInputView);
+    countryView.addEventHandler(controlCountryView);
 }
-handleCountryView();
-
+init();
 

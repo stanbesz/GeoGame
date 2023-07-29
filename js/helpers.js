@@ -1,4 +1,5 @@
 import { API_URL , TIMEOUT_SECS} from "./config";
+
 export const timeout = function (s) {
     return new Promise(function (_, reject) {
       setTimeout(function () {
@@ -7,8 +8,8 @@ export const timeout = function (s) {
     });
   };
 
-export const getJSON = async function(searchTag='name',countryName){
-    let request = await fetch(`${API_URL}${searchTag}/${countryName}`);
+export const getJSON = async function(countryName){
+    let request = await fetch(`${API_URL}alpha/${countryName}`);
     //console.log(request);
     const countryJSON = await Promise.race([request,timeout(TIMEOUT_SECS)]);
     const res = await countryJSON.json();
